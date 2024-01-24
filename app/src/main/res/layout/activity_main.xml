@@ -6,57 +6,60 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/main_image"
-        android:layout_width="wrap_content"
-        android:layout_height="250dp"
-        android:src="@drawable/app_bg" />
-
     <TextView
-        android:id="@+id/main_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/main_image"
+        style="@style/text_bi_20"
+        android:id="@+id/main_create_account"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Login"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold|italic" />
+        android:text="Create An Account" />
 
-    <EditText
-        android:id="@+id/main_username"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/main_title"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/custom_border"
-        android:drawableLeft="@drawable/ic_profile"
-        android:drawablePadding="10dp"
-        android:hint="Username"
-        android:padding="10dp" />
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_create_account">
 
-    <EditText
-        android:id="@+id/main_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/main_username"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/custom_border"
-        android:drawableLeft="@drawable/ic_lock"
-        android:drawablePadding="10dp"
-        android:hint="Password"
-        android:padding="10dp" />
+        <ImageView
+            android:id="@+id/main_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_170sdp"
+            android:src="@drawable/app_bg" />
 
-    <Button
-        android:backgroundTint="@color/orange"
-        android:text="Login"
-        android:layout_marginTop="30dp"
-        android:layout_marginHorizontal="50dp"
-        android:layout_below="@id/main_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <TextView
+            style="@style/text_bi_20"
+            android:id="@+id/main_title"
+            android:layout_below="@id/main_image"
+            android:layout_centerHorizontal="true"
+            android:text="Login" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/main_title"
+            android:layout_marginHorizontal="@dimen/_30sdp">
+
+            <EditText
+                style="@style/edit_15"
+                android:id="@+id/main_username"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:drawableLeft="@drawable/ic_profile"
+                android:hint="Username" />
+
+            <EditText
+                style="@style/edit_15"
+                android:id="@+id/main_password"
+                android:layout_below="@id/main_username"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:drawableLeft="@drawable/ic_lock"
+                android:hint="Password" />
+
+            <Button
+                style="@style/button_18"
+                android:layout_below="@id/main_password"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:text="Login" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>
