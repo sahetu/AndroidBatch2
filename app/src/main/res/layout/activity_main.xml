@@ -7,8 +7,8 @@
     tools:context=".MainActivity">
 
     <TextView
-        style="@style/text_bi_20"
         android:id="@+id/main_create_account"
+        style="@style/text_bi_20"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="@string/signup" />
@@ -25,8 +25,8 @@
             android:src="@drawable/app_bg" />
 
         <TextView
-            style="@style/text_bi_20"
             android:id="@+id/main_title"
+            style="@style/text_bi_20"
             android:layout_below="@id/main_image"
             android:layout_centerHorizontal="true"
             android:text="@string/login" />
@@ -38,22 +38,22 @@
             android:layout_marginHorizontal="@dimen/_30sdp">
 
             <EditText
-                android:inputType="textEmailAddress"
-                style="@style/edit_15"
                 android:id="@+id/main_username"
+                style="@style/edit_15"
                 android:layout_marginTop="@dimen/_30sdp"
                 android:drawableLeft="@drawable/ic_profile"
-                android:hint="@string/username" />
+                android:hint="@string/username"
+                android:inputType="textEmailAddress" />
 
             <EditText
-                android:maxLength="12"
-                android:inputType="textPassword"
-                style="@style/edit_15"
                 android:id="@+id/main_password"
+                style="@style/edit_15"
                 android:layout_below="@id/main_username"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:drawableLeft="@drawable/ic_lock"
-                android:hint="@string/password" />
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:maxLength="12" />
 
             <Button
                 android:id="@+id/main_login"
